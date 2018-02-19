@@ -1,0 +1,14 @@
+{
+  "name": "genetic-algorithm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Antoine Caron <antoine.caron@zenika.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "chalk": "^2.3.1",
+    "gps-distance": "^0.0.4"
+  }
+}
