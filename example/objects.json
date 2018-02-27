@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Rope",
+    "volume": 2,
+    "value": 4
+  },
+  {
+    "name": "Phone",
+    "volume": 1,
+    "value": 15
+  },
+  {
+    "name": "Knife",
+    "volume": 1,
+    "value": 2
+  },
+  {
+    "name": "Food",
+    "volume": 3,
+    "value": 4
+  },
+  {
+    "name": "Water",
+    "volume": 3,
+    "value": 5
+  },
+  {
+    "name": "Radio",
+    "volume": 2,
+    "value": 5
+  },
+  {
+    "name": "Sleepbag",
+    "volume": 5,
+    "value": 5
+  },
+  {
+    "name": "Book",
+    "volume": 3,
+    "value": 4
+  },
+  {
+    "name": "Book",
+    "volume": 3,
+    "value": 4
+  },
+  {
+    "name": "Clothes",
+    "volume": 5,
+    "value": 14
+  },
+  {
+    "name": "GPS",
+    "volume": 2,
+    "value": 4
+  },
+  {
+    "name": "Map",
+    "volume": 1,
+    "value": 1
+  }
+]

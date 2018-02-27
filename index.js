@@ -16,21 +16,20 @@ module.exports = function (nbOfGenerations, startPopulation, fitness, combine, m
             fitness: fitness(elem),
         }));
 
-        const sortedPopulation = _.orderBy(evalutatePopulation, elem => elem.fitness);
+
+        const sortedPopulation = _.orderBy(evalutatePopulation, elem => elem.fitness, 'desc');
 
         // We select the best from the generation
         const selection = sortedPopulation.slice(0, selectionSize);
 
         const bestFromGeneration = _.first(selection);
-        if (bestFromGeneration.fitness < bestFound.fitness) {
+        if (bestFromGeneration.fitness > bestFound.fitness) {
             bestFound = bestFromGeneration
         }
 
         let childrens = [];
 
         for(let j = 0; j< selection.length; j+=2) {
-            childrens.push(combine(selection[j].gene, selection[j+1].gene))
-            childrens.push(combine(selection[j].gene, selection[j+1].gene))
             childrens.push(combine(selection[j].gene, selection[j+1].gene))
             childrens.push(combine(selection[j].gene, selection[j+1].gene))
         }
