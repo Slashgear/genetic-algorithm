@@ -11,7 +11,7 @@
     "example": "node example/travellerProblem.js"
   },
   "dependencies": {
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
     "chalk": "^2.3.1",
