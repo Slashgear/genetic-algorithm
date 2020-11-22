@@ -4,6 +4,12 @@
   "main": "index.js",
   "author": "Antoine Caron <antoine.caron@zenika.com>",
   "license": "MIT",
+  "keywords": [
+    "genetic-algorithm"
+  ],
+  "scripts": {
+    "example": "node example/travellerProblem.js"
+  },
   "dependencies": {
     "lodash": "^4.17.5"
   },

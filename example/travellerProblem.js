@@ -48,6 +48,6 @@ const combine = (gene1, gene2) => {
 
 console.log(chalk.red('Begin'));
 
-const {bestFound} = geneticAlgorithm(500, startPopulation, fitness, combine, mutation, 0.1);
+const {bestFound} = geneticAlgorithm(1000, startPopulation, fitness, combine, mutation, 0.1);
 
 console.log(chalk.yellow('Best travel found', showTravel(bestFound.gene), '', bestFound.fitness));
