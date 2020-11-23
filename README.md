@@ -31,8 +31,6 @@ yarn example
 
 ## Author
 
-👤 **Antoine Caron <antoine.caron@zenika.com>**
-
 * Website: http://slashgear.github.io/
 * Twitter: [@Slashgear_](https://twitter.com/Slashgear\_)
 * Github: [@Slashgear](https://github.com/Slashgear)
