@@ -1,6 +1,33 @@
-const _ = require('lodash');
+import * as _ from "lodash";
 
-module.exports = function (nbOfGenerations, startPopulation, fitness, combine, mutation, mutationFactor) {
+type Gene = Array<unknown>
+
+interface BestFound {
+    gene:Gene
+    fitness:number
+}
+
+interface Result {
+    bestFound: BestFound
+}
+
+interface Fitness { (items:Gene): number }
+
+interface Combine { (geneA: Gene, geneB: Gene): Gene}
+
+interface Mutation { (gene:Gene): Gene}
+
+/**
+ * Application of Genetic Algorithm on an array of genes
+ *
+ * @param nbOfGenerations population generation counter
+ * @param startPopulation list of start population genes
+ * @param fitness function to evaluate the gene value
+ * @param combine generator of child based on two genes
+ * @param mutation generator of random inversion in gene to create mutation
+ * @param mutationFactor ratio of population to mutate of each generation cycle
+ */
+function geneticAlgorithm(nbOfGenerations:number, startPopulation:Gene, fitness:Fitness, combine: Combine, mutation:Mutation, mutationFactor:number):Result {
     const selectionSize = Math.ceil(startPopulation.length / 2);
     const nbToMutate = Math.ceil(startPopulation.length * mutationFactor);
     let currentPopulation = startPopulation;
@@ -11,7 +38,7 @@ module.exports = function (nbOfGenerations, startPopulation, fitness, combine, m
     };
 
     for(let i = 0; i< nbOfGenerations; i ++) {
-        const evalutatePopulation = currentPopulation.map(elem => ({
+        const evalutatePopulation = currentPopulation.map((elem:Gene) => ({
             gene: elem,
             fitness: fitness(elem),
         }));
@@ -26,7 +53,7 @@ module.exports = function (nbOfGenerations, startPopulation, fitness, combine, m
             bestFound = bestFromGeneration
         }
 
-        let childrens = [];
+        const childrens = [];
 
         for(let j = 0; j< selection.length; j+=2) {
             childrens.push(combine(selection[j].gene, selection[j+1].gene))
@@ -49,4 +76,6 @@ module.exports = function (nbOfGenerations, startPopulation, fitness, combine, m
     }
 
     return { bestFound }
-};
+}
+
+export = geneticAlgorithm
