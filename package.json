@@ -1,20 +1,28 @@
 {
   "name": "genetic-algorithm",
   "version": "1.1.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/Slashgear/genetic-algorithm",
   "author": "Antoine Caron <antoine.caron@zenika.com>",
   "license": "MIT",
   "keywords": [
     "genetic-algorithm"
   ],
   "scripts": {
+    "lint": "eslint index.ts",
+    "build": "tsc --listEmittedFiles",
     "example": "node example/travellerProblem.js"
   },
   "dependencies": {
     "lodash": "^4.17.19"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.16.0",
+    "@typescript-eslint/parser": "^4.16.0",
+    "eslint": "^7.21.0",
     "chalk": "^2.3.1",
-    "gps-distance": "^0.0.4"
+    "gps-distance": "^0.0.4",
+    "typescript": "^4.2.2"
   }
 }
